@@ -1019,5 +1019,13 @@ hr {
 */
 
 .home {
+  height: 800px;
   height: 100vh;
+}
+
+.home .h1 {
+  background: url(/images/logo.png) no-repeat center top;
+  padding-top: 360px;
+  min-width: 360px;
+  text-align: center;
 }
