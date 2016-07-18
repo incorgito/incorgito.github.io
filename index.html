@@ -5,8 +5,7 @@
     <meta charset="utf-8">
     <link rel="canonical" href="https://incorgito.com">
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
-    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
-    <style amp-custom>
+    <style>
       @import url(https://fonts.googleapis.com/css?family=Playfair+Display);
       body {
         font: calc(16px + 0.5vw)/1.5 'Playfair Display', serif;
@@ -20,15 +19,39 @@
         font-weight: normal;
         line-height: 1;
       }
+      .circle {
+        height: 400px;
+        width: 400px;
+        position: relative;
+      }
+      .circle img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+      }
+      .circle .steve {
+        transform: translate(-50%, -100%);
+      }
+      .circle .beato {
+        transform: translate(-100%, 0);
+      }
+      .circle .ria {
+        transform: translate(10%, 0);
+      }
     </style>
-    <script async src="https://cdn.ampproject.org/v0.js"></script>
   </head>
   <body>
     <main>
-      <h1>We are Incorgito</h1>
-      <p>
-        <amp-img src="images/incorgito.png" width="256" height="256">
-      </p>
+      <h1>Incorgito</h1>
+      <p>We build and design for the web</p>
+      <p><img class="logo" src="images/incorgito.png" height="256"></p>
+      <h2>The team</h2>
+      <div class="circle">
+        <img class="steve" src="images/steve.png" height="169">
+        <img class="beato" src="images/beato.png" height="158">
+        <img class="ria" src="images/ria.png" height="170">
+      </div>
+      <h2>Contact us</h2>
       <p>woof@incorgito.com</p>
     </main>
   </body>
