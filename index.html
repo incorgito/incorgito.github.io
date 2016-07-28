@@ -4,65 +4,8 @@
     <title>Incorgito</title>
     <meta charset="utf-8">
     <link rel="canonical" href="https://incorgito.com">
+    <link rel="stylesheet" href="css/index.css">
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
-    <style>
-      @import url(https://fonts.googleapis.com/css?family=Fredoka+One|Work+Sans);
-      body {
-        font: calc(16px + 0.5vw)/1.5 'Work Sans', sans-serif;
-        color: #333;
-        overflow-x: hidden;
-      }
-      h1, h2 {
-        font-family: 'Fredoka One', sans-serif;
-        font-weight: normal;
-        line-height: 1;
-      }
-      h1, h2, p { margin: 0; }
-      h1 { font-size: 2.83rem; }
-      h2 { font-size: 2; }
-      main {
-        width: 40rem;
-        margin: 0 auto;
-      }
-      section {
-        margin: 10rem 1rem;
-      }
-      section.-left { text-align: left; }
-      section.-center { text-align: center; }
-      section.-right { text-align: right; }
-      .team .wrapper {
-        display: inline-block;
-        height: 600px;
-        width: 400px;
-        position: relative;
-        text-align: center;
-      }
-      .team img {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-      }
-      .team .steve {
-        transform: translate(-50%, -100%);
-      }
-      .team .beato {
-        transform: translate(-100%, 0);
-      }
-      .team .ria {
-        transform: translate(10%, 0);
-      }
-      .clients ul {
-        list-style: none;
-        padding: 0;
-        margin: 3rem 0;
-      }
-      @media (max-width: 40rem) {
-        main { width: auto; }
-        section.-left,
-        section.-center,
-        section.-right { text-align: center; }
-      }
-    </style>
   </head>
   <body>
     <main>
@@ -70,6 +13,14 @@
         <h1>Incorgito</h1>
         <p>We build and design for the web</p>
         <p><img class="logo" src="images/incorgito.png" height="256"></p>
+        <div class="services">
+          <h2>We're good at making:</h2>
+          <ul>
+            <li>💾 Database-driven web apps</li>
+            <li>📊 Interactive infographics/visualizations</li>
+            <li>🎨 Branding sites</li>
+          </ul>
+        </div>
       </section>
       <section class="team -right">
         <div class="wrapper">
@@ -90,5 +41,7 @@
         <p>woof@incorgito.com</p>
       </section>
     </main>
+    <script src="//twemoji.maxcdn.com/twemoji.min.js"></script>
+    <script>twemoji.parse(document.body)</script>
   </body>
 </html>
