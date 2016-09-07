@@ -70,8 +70,25 @@ header > .title .logo {
   transition: transform .4s ease-in-out;
   transform: translate(0, 0);
 }
+@keyframes logo {
+  from {
+    transform: translateY(10px) rotate(5deg);
+  }
+  50% {
+    transform: rotate(-5deg);
+  }
+  to {
+    transform: translateY(-10px) rotate(5deg);
+  }
+}
+header > .title .logo img {
+  animation: 3s linear infinite alternate logo;
+}
+header > .title .logo img:hover {
+  animation: .2s linear infinite alternate logo;
+}
 header.-mini > .title .logo {
-  transform: translate(-90%, -66%) scale(0.75);
+  transform: translate(-45%, -66%) scale(0.75);
 }
 .services {
   margin-top: 40vh;
