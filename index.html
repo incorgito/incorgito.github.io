@@ -9,32 +9,41 @@
   </head>
   <body>
     <main>
-      <section class="about -left">
-        <h1>Incorgito</h1>
-        <p>We build and design for the web</p>
-        <p><img class="logo" src="images/incorgito.png" height="256"></p>
-        <div class="services">
+      <header>
+        <div class="bg"></div>
+        <div class="title col">
+          <h1>Incorgito</h1>
+          <p>We build and design for the web</p>
+          <p><img class="logo" src="images/incorgito.png" height="256"></p>
+        </div>
+      </header>
+      <section class="about -right">
+        <div class="services col">
           <h2>We're good at making:</h2>
           <ul>
             <li>💾 Database-driven web apps</li>
             <li>📊 Interactive infographics/visualizations</li>
-            <li>🎨 Branding sites</li>
+            <li>🎨 Branding microsites</li>
           </ul>
         </div>
       </section>
-      <section class="team -right">
-        <div class="wrapper">
-          <h2>The team</h2>
-          <img class="steve" src="images/steve.png" height="169">
-          <img class="beato" src="images/beato.png" height="158">
-          <img class="ria" src="images/ria.png" height="170">
+      <section class="team -left">
+        <div class="col">
+          <div class="circle">
+            <h2>The team</h2>
+            <img class="steve" src="images/steve.png" height="169">
+            <img class="beato" src="images/beato.png" height="158">
+            <img class="ria" src="images/ria.png" height="170">
+          </div>
         </div>
       </section>
-      <section class="clients -left">
-        <h2>Our clients</h2>
-        <ul>
-          <li><img src="images/clients/360.png"></li>
-        </p>
+      <section class="clients -center">
+        <div class="col">
+          <h2>Our clients</h2>
+          <ul>
+            <li><img src="images/clients/360.png"></li>
+          </p>
+        </div>
       </section>
       <section class="contact -center">
         <h2>Contact us</h2>
@@ -43,5 +52,16 @@
     </main>
     <script src="//twemoji.maxcdn.com/twemoji.min.js"></script>
     <script>twemoji.parse(document.body)</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/noframework.waypoints.min.js"></script>
+    <script>
+      new Waypoint({
+        element: document.querySelector('.about'),
+        handler: function(direction) {
+          document.querySelector('header')
+            .classList.toggle('-mini', direction === 'down');
+        },
+        offset: '-25%',
+      })
+    </script>
   </body>
 </html>
