@@ -12,10 +12,10 @@ h1, h2 {
   line-height: 1;
 }
 h1, h2, p { margin: 0; }
-h1 { font-size: 2.83rem; }
-h2 { font-size: 2; }
+h1 { font-size: 2.83em; }
+h2 { font-size: 2em; }
 section {
-  padding: 10rem 1rem;
+  padding: 1rem;
   position: relative;
 }
 section.-left { text-align: left; }
@@ -27,21 +27,16 @@ section.-right { text-align: right; }
   position: relative;
 }
 
-@keyframes logo {
-  from {
-    transform: rotate(5deg) translateY(10px);
-  }
-  50% {
-    transform: rotate(-5deg);
-  }
-  to {
-    transform: rotate(5deg) translateY(-10px);
-  }
-}
+/* Header */
+
 header {
   position: fixed;
   z-index: 10;
   width: 100%;
+  transition: font-size .2s ease-in-out;
+}
+header.-mini {
+  font-size: 80%;
 }
 header > .bg {
   position: absolute;
@@ -52,11 +47,11 @@ header > .bg {
   border-left: 100vw solid #e90;
   border-bottom: 75vh solid transparent;
   padding-top: 0;
-  transition: border-width .4s ease-in-out, padding-top .4s ease-in-out;
+  transition: border-width .4s ease-in-out, padding-top .2s ease-in-out;
 }
 header.-mini > .bg {
   border-bottom: 10vh solid transparent;
-  padding-top: 10vh;
+  padding-top: 5vh;
 }
 header > .title {
   color: white;
@@ -64,11 +59,14 @@ header > .title {
   transition: transform .4s ease-in-out;
 }
 header.-mini > .title {
-  transform: translate(-10vw, 5vh);
+  transform: translate(calc(-30vw + 50%), 1vh);
 }
 header > .title .logo {
   transition: transform .4s ease-in-out;
   transform: translate(0, 0);
+}
+header.-mini > .title .logo {
+  transform: translate(-45%, -50%) scale(0.75);
 }
 @keyframes logo {
   from {
@@ -85,14 +83,13 @@ header > .title .logo img {
   animation: 3s linear infinite alternate logo;
 }
 header > .title .logo img:hover {
-  animation: .2s linear infinite alternate logo;
+  animation-duration: .2s;
 }
-header.-mini > .title .logo {
-  transform: translate(-45%, -66%) scale(0.75);
-}
+
+/* Services */
+
 .services {
-  margin-top: 40vh;
-  padding: 1.5rem;
+  margin-top: 60vh;
   color: #e90;
 }
 .services > ul {
@@ -112,12 +109,19 @@ header.-mini > .title .logo {
   vertical-align: -0.15em;
   margin-right: 0.15em;
 }
+
+/* Team */
+
 .team {
   margin: 25vh 0;
 }
-.team > .cirle {
-  display: inline-block;
-  height: 600px;
+.team > .col {
+  display: flex;
+  align-items: center;
+}
+.team > .col > .circle {
+  flex: 1 auto;
+  height: 400px;
   width: 400px;
   position: relative;
   text-align: center;
@@ -136,8 +140,11 @@ header.-mini > .title .logo {
 .circle > .ria {
   transform: translate(10%, 0);
 }
+
+/* Clients */
+
 .clients {
-  margin-top: 25vh;
+  margin: 25vh 0;
 }
 .clients ul {
   list-style: none;
@@ -145,8 +152,16 @@ header.-mini > .title .logo {
   margin: 3rem 0;
 }
 
+/* Contact */
+
+.contact {
+  margin: 25vh 0;
+}
+
+/* Responsive */
+
 @media (max-width: 40rem) {
-  main { width: auto; }
+  .col { width: auto; }
   section.-left,
   section.-center,
   section.-right { text-align: center; }
