@@ -38,6 +38,9 @@ header {
 header.-mini {
   font-size: 80%;
 }
+header > .title > .blurb {
+  transition: opacity ease-in-out .2s;
+}
 header > .bg {
   position: absolute;
   top: 0;
@@ -51,7 +54,7 @@ header > .bg {
 }
 header.-mini > .bg {
   border-bottom: 10vh solid transparent;
-  padding-top: 5vh;
+  padding-top: 1.5rem;
 }
 header > .title {
   color: white;
@@ -61,12 +64,15 @@ header > .title {
 header.-mini > .title {
   transform: translate(calc(-30vw + 50%), 1vh);
 }
-header > .title .logo {
+header > .title > .logo {
   transition: transform .4s ease-in-out;
   transform: translate(0, 0);
 }
-header.-mini > .title .logo {
+header.-mini > .title > .logo {
   transform: translate(-45%, -50%) scale(0.75);
+}
+header.-mini > .title > .blurb {
+  opacity: 0;
 }
 @keyframes logo {
   from {
