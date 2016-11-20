@@ -37,6 +37,10 @@ header {
 }
 header.-mini {
   font-size: 80%;
+  height: 50px;
+}
+header.-mini .title {
+  height: 50px;
 }
 header > .title > .blurb {
   transition: opacity ease-in-out .2s;
@@ -145,6 +149,14 @@ header > .title .logo img:hover {
 }
 .circle > .ria {
   transform: translate(10%, 0);
+}
+.circle > a {
+  text-decoration: none;
+  cursor: pointer;
+}
+.circle > .steve > img {
+  display: block;
+  margin: 0 auto;
 }
 
 /* Clients */
