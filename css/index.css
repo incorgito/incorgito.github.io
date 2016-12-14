@@ -1,7 +1,7 @@
 @import url(https://fonts.googleapis.com/css?family=Fredoka+One|Work+Sans);
 
 body {
-  font: calc(16px + 0.5vw)/1.5 'Work Sans', sans-serif;
+  font: 20px/1.5 'Work Sans', sans-serif;
   color: #333;
   overflow-x: hidden;
   margin: 0;
@@ -35,16 +35,6 @@ header {
   width: 100%;
   transition: font-size .2s ease-in-out;
 }
-header.-mini {
-  font-size: 80%;
-  height: 50px;
-}
-header.-mini .title {
-  height: 50px;
-}
-header > .title > .blurb {
-  transition: opacity ease-in-out .2s;
-}
 header > .bg {
   position: absolute;
   top: 0;
@@ -54,30 +44,41 @@ header > .bg {
   border-left: 100vw solid #e90;
   border-bottom: 75vh solid transparent;
   padding-top: 0;
-  transition: border-width .4s ease-in-out, padding-top .2s ease-in-out;
+  transition: border .4s ease-in-out, padding-top .2s ease-in-out;
 }
 header.-mini > .bg {
-  border-bottom: 10vh solid transparent;
+  border-bottom: 0 solid transparent;
+  border-left-color: rgba(255, 255, 255, 0.8);
+  padding-top: 7.5rem;
+}
+
+header > .title {
+  transform: translateY(10vh);
+  position: relative;
+  transition: transform ease-in-out .4s;
   padding-top: 1.5rem;
 }
-header > .title {
-  color: white;
-  transform: translate(0, 15vh);
-  transition: transform .4s ease-in-out;
-}
 header.-mini > .title {
-  transform: translate(calc(-30vw + 50%), 1vh);
+  transform: translateY(0);
 }
+
+header > .title > .text {
+  color: white;
+  transition: all ease-in-out .4s;
+}
+header.-mini > .title > .text {
+  color: inherit;
+  transform: translateX(17.5rem);
+  font-size: 80%;
+}
+
 header > .title > .logo {
-  transition: transform .4s ease-in-out;
-  transform: translate(0, 0);
+  transition: all ease-in-out .4s;
 }
 header.-mini > .title > .logo {
-  transform: translate(-45%, -50%) scale(0.75);
+  transform: translate(-4.5rem, -11.5rem) scale(0.5);
 }
-header.-mini > .title > .blurb {
-  opacity: 0;
-}
+
 @keyframes logo {
   from {
     transform: translateY(10px) rotate(5deg);
@@ -89,17 +90,18 @@ header.-mini > .title > .blurb {
     transform: translateY(-10px) rotate(5deg);
   }
 }
-header > .title .logo img {
+header > .title > .logo > img {
+  height: 20rem;
   animation: 3s linear infinite alternate logo;
 }
-header > .title .logo img:hover {
+header > .title > .logo > img:hover {
   animation-duration: .2s;
 }
 
 /* Services */
 
 .services {
-  margin-top: 60vh;
+  margin-top: 80vh;
   color: #e90;
 }
 .services > ul {
